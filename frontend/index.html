@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="weatherApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://unpkg.com/sanitize.css" />
+    <style>
+      body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fb; color: #222; }
+      .container { max-width: 960px; margin: 0 auto; padding: 16px; }
+      .card { background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); padding: 16px; margin: 12px 0; }
+      .title { font-weight: 700; font-size: 20px; margin-bottom: 12px; }
+      .row { display: flex; gap: 12px; align-items: center; }
+      input { padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; flex: 1; }
+      button { padding: 10px 14px; background: #2563eb; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+      button:disabled { background: #9aa7c7; cursor: not-allowed; }
+      .muted { color: #6b7280; }
+    </style>
+
+    <!-- AngularJS 1.x + ngRoute -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular-route.min.js"></script>
+
+    <!-- App & Services -->
+    <script src="./app.js"></script>
+    <script src="./services/weather.service.js"></script>
+
+    <!-- Components -->
+    <script src="./components/header/header.component.js"></script>
+    <script src="./components/search/search.component.js"></script>
+    <script src="./components/weather/weather.component.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <app-header></app-header>
+      <div ng-view></div>
+    </div>
+
+    <!-- Templates -->
+    <script type="text/ng-template" id="/">
+      <weather></weather>
+    </script>
+  </body>
+  </html>
+
+

@@ -1,0 +1,14 @@
+{
+  "name": "weather-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AngularJS 1.x static frontend for Weather Dashboard",
+  "scripts": {
+    "start": "http-server -p 5173 --cors"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
+
+
